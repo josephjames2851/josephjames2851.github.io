@@ -1,0 +1,17 @@
+---
+layout: page
+title: Projects
+order: 1
+---
+
+These are my recent projects to showcase my work.
+
+{% for project in site.projects %}
+  <div class="col-md-4">
+    <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+    <h2>Subtitle for Project 1</h2>
+    <img src="/images/{{ project.image }}">
+
+  </div>
+  <hr>
+{% endfor %}

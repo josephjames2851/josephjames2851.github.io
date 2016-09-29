@@ -1,0 +1,9 @@
+# Site settings
+title: Joe Weinzettel
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+collections:
+  projects:
+    output: true

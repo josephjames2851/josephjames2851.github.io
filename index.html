@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div>
+  <p>Hi, my name is Joe and I design meaningful, user-centered and results-driven experiences.</p>
+<div>
+
+{% for project in site.projects %}
+  <div class="col-md-4">
+    <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+    <h2>Subtitle for Project 1</h2>
+    <img src="/images/{{ project.image }}">
+
+  </div>
+  <hr>
+{% endfor %}
+
+{% for post in site.posts %}
+	<article>
+		<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+		<p>{{ post.date | date: "%b %-d, %Y" }}</p>
+		{{ post.content }}
+	</article>
+	<hr>
+{% endfor %}
